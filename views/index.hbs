@@ -1,0 +1,267 @@
+<nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav">
+    <a class="navbar-brand" href="#">Tinder</a>
+    <button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-bars"></i>
+    </button>
+    <div
+            class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item" role="presentation"></li>
+            <li class="nav-item" role="presentation"></li>
+            <li class="nav-item" role="presentation"></li>
+            <li class="nav-item" role="presentation"><a class="nav-link" href="post.html">Tiếng việt</a></li>
+        </ul>
+    </div>
+    <button type="button" class="btn btn-outline-danger btn-light" data-toggle="modal" data-target="#loginModal">
+        ĐĂNG NHẬP
+    </button>
+
+    <a class="btn -outline-danger btn-light" style="color: red" href="/search">TÌM KIẾM</a>
+
+
+</nav>
+
+<!-- Đăng nhập -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header border-bottom-0">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-title text-center">
+                    <h4>Login</h4>
+                </div>
+                <div class="d-flex flex-column text-center">
+                    <form action="/login" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="_email" name="email" placeholder="Your email address...">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="_password" name="password" placeholder="Your password...">
+                        </div>
+                        <button type="submit" class="btn btn-info btn-block btn-round">Login</button>
+                    </form>
+
+                    <div class="text-center text-muted delimiter">or use a social network</div>
+                    <div class="d-flex justify-content-center social-buttons">
+                        <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </button>
+                        <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </button>
+                        <button type="submit" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Linkedin">
+                            <i class="fab fa-linkedin"></i>
+                        </button>
+                        </di>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <div class="signup-section">Not a member yet? <a href="#a" class="text-info"> Sign Up</a>.</div>
+            </div>
+        </div>
+    </div>
+</div>
+<header class="masthead d-flex align-items-center" style="background-image:url('/img/Tinder.png'); height: 100vh">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-lg-8 mx-auto">
+                <div class="site-heading">
+<!--                    <h1>Swipe Right</h1>-->
+                    <button type="button" class="btn btn-outline-danger btn-light" data-toggle="modal" data-target="#dangKyModal">
+                        TẠO TÀI KHOẢN
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!--Đăng ký-->
+<div class="modal fade" id="dangKyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header border-bottom-0">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <div class="form-title text-center">
+                    <h4>ĐĂNG KÝ</h4>
+                </div>
+                <div class="d-flex flex-column text-center">
+                    <form action="/createUser" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control" id="name"placeholder="Họ Tên...">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Tài khoản mới...">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Mật khẩu mới...">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="password2" name="password2" placeholder="Nhập lại mật khẩu...">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="number_phone" name="number_phone" placeholder="Số điện thoại...">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="address" name="address" placeholder="Địa chỉ...">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlFile1">Avatar</label>
+                            <input type="file" class="form-control-file" id="avatar" name="avatar">
+                        </div>
+
+                        <button type="submit" class="btn btn-info btn-block btn-round">Đăng ký</button>
+                    </form>
+
+                    <div class="text-center text-muted delimiter"></div>
+                    <div class="d-flex justify-content-center social-buttons">
+                        <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </button>
+                        <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </button>
+                        <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Linkedin">
+                            <i class="fab fa-linkedin"></i>
+                        </button>
+                        </di>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div style="margin: 0 80px">
+    <div class="row">
+        <div class="col status-user">
+            <div class="post-preview">
+                <a href="#">
+                    <h2 class="post-title" style="font-size: 24px;">Sean &amp; Marianna Polcha</h2>
+                </a>
+                <hr>
+                <p class="post-meta" style="font-family: Lora, serif;color: rgb(0,0,0);"><br>CÁM ƠN CÁC BẠN vì đã tạo điều kiện để tôi có thể gặp được tri kỷ của đời mình. Năm phút sau khi bắt đầu cuộc trò chuyện đầu tiên của chúng tôi, nàng, người hiện tại là bà xã của tôi đã nói về chuyện chúng tôi sẽ có một đám cưới
+                    tuyệt vời đến nhường nào.<br><br></p>
+            </div>
+        </div>
+        <div class="col status-user">
+            <div class="post-preview">
+                <a href="#">
+                    <h2 class="post-title" style="font-size: 24px;">Sean &amp; Marianna Polcha</h2>
+                </a>
+                <hr>
+                <p class="post-meta" style="font-family: Lora, serif;color: rgb(0,0,0);"><br>CÁM ƠN CÁC BẠN vì đã tạo điều kiện để tôi có thể gặp được tri kỷ của đời mình. Năm phút sau khi bắt đầu cuộc trò chuyện đầu tiên của chúng tôi, nàng, người hiện tại là bà xã của tôi đã nói về chuyện chúng tôi sẽ có một đám cưới
+                    tuyệt vời đến nhường nào.<br><br></p>
+            </div>
+        </div>
+        <div class="col status-user">
+            <div class="post-preview">
+                <a href="#">
+                    <h2 class="post-title" style="font-size: 24px;">Sean &amp; Marianna Polcha</h2>
+                </a>
+                <hr>
+                <p class="post-meta" style="font-family: Lora, serif;color: rgb(0,0,0);"><br>CÁM ƠN CÁC BẠN vì đã tạo điều kiện để tôi có thể gặp được tri kỷ của đời mình. Năm phút sau khi bắt đầu cuộc trò chuyện đầu tiên của chúng tôi, nàng, người hiện tại là bà xã của tôi đã nói về chuyện chúng tôi sẽ có một đám cưới
+                    tuyệt vời đến nhường nào.<br><br></p>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="row">
+        <div class="col">
+            <h1 style="font-size: 24PX;margin: 0px 20px 10px;">AN TOÀN</h1>
+            <div>
+                <section>
+                    <ul>
+                        <li><a href="#" style="font-size: 18px;">Quy tắc cộng đồng<br></a></li>
+                        <li><a href="#" style="font-size: 18px;">Một vài lời khuyên về an toàn<br></a></li>
+                        <li><a href="#" style="font-size: 18px;">An toàn và Chính sách<br></a></li>
+                        <li><a href="#" style="font-size: 18px;">Bảo mật</a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+        <div class="col">
+            <h1 style="font-size: 24PX;margin: 0px 20px 10px;">PHÁP LÝ</h1>
+            <div>
+                <section>
+                    <ul>
+                        <li><a href="#" style="font-size: 18px;">Quyền riêng tư<br></a></li>
+                        <li><a href="#" style="font-size: 18px;">Điều khoản<br></a></li>
+                        <li><a href="#" style="font-size: 18px;">Chính sách Cookie<br></a></li>
+                        <li><a href="#" style="font-size: 18px;">Sở Hữu Trí Tuệ</a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+        <div class="col">
+            <h1 style="font-size: 24PX;margin: 0px 20px 10px;">NGHỀ NGHIỆP</h1>
+            <div>
+                <section>
+                    <ul>
+                        <li><a href="#" style="font-size: 18px;">Cổng thông tin nghề nghiệp<br></a></li>
+                        <li><a href="#" style="font-size: 18px;">Blog Công nghệ<br></a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+        <div class="col">
+            <h1 style="font-size: 24PX;margin: 0px 20px 10px;">MẠNG XÃ HỘI</h1>
+            <div>
+                <section>
+                    <ul class="list-inline text-center">
+                        <li class="list-inline-item"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-facebook fa-stack-1x fa-inverse"></i></span>
+                            <span
+                                    class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-instagram fa-stack-1x fa-inverse"></i></span><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-youtube-play fa-stack-1x fa-inverse"></i></span></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+        <div class="col">
+            <div>
+                <section>
+                    <ul>
+                        <li><a href="#" style="font-size: 18px;">Phòng báo chí<br></a></li>
+                        <li><a href="#" style="font-size: 18px;">Liên hệ<br></a></li>
+                        <li><a href="#" style="font-size: 18px;">Gói thuê bao đăng ký<br></a></li>
+                        <li><a href="#" style="font-size: 18px;">Hỗ trợ</a></li>
+                        <li><a href="#" style="font-size: 18px;">Mã Khuyến mãi</a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="col" style="margin: 0 80px">
+    <div>
+        <h1 style="font-size: 24px;"><strong>TẢI NGAY ỨNG DỤNG!</strong><br></h1><button class="btn btn-primary" type="button" style="width: 125px;margin: 10px;">IOS</button><button class="btn btn-primary" type="button" style="width: 125px;margin: 10px;">android</button></div>
+    <p
+            style="font-size: 14px;">Các bằng hữu độc thân vui vẻ, xin có mấy lời gửi tới các bạn: Nếu bạn đang tìm kiếm người yêu, muốn bắt đầu hẹn hò, hay chỉ đơn giản là muốn có thêm bạn bè, bạn cần có mặt trên Tinder. Với hơn 55 tỉ lượt tương hợp được kết nối, Tinder chính là
+        nơi để gặp gỡ bạn tương hợp tốt nhất tiếp theo của bạn. Chân thành mà nói, môi trường hẹn hò ngày nay không còn giống như thời các cụ ngày xưa, giờ đây hầu hết mọi người đang gặp gỡ qua mạng xã hội. Với Tinder, ứng dụng hẹn hò miễn phí phổ
+        biến nhất trên thế giới, hàng triệu người độc thân tuyệt vời khác luôn nằm trong tầm tay bạn. Không những thế họ luôn sẵn sàng gặp gỡ những người mới như bạn. Dù bạn "thẳng" hay thuộc cộng đồng LGBTQIA, Tinder luôn sát cánh nhen nhóm những
+        cơ hội gặp gỡ cho bạn.<br></p>
+    <p style="font-size: 14px;">Sẽ luôn có thứ gì đó phù hợp cho mọi người trên Tinder. Bạn muốn thử tay nghề tán gái? Sẽ là như vậy. Bạn đang cố tìm thêm bạn bè? Khỏi cần nói gì thêm. Bạn mới tới ký túc xá và muốn tận dụng tối đa quãng thời gian học đại học của mình? Tinder
+        U sẽ giúp bạn. Tinder không phải là trang hẹn hò thường thường bậc trung cho bạn — đó là ứng dụng hẹn hò đa dạng nhất, nơi những con người trưởng thành thuộc mọi tầng lớp xã hội với những trải nghiệm phong phú khác nhau được khuyến khích
+        tạo dựng các kết nối, những kỷ niệm hay cái gì đó tương tự.<br></p>
+</div>
+<hr>
+<footer style="height: 50px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-lg-8 mx-auto">
+                <p class="text-muted copyright">© 2021 Match Group, LLC, mọi quyền đã được bảo lưu.<br></p>
+            </div>
+        </div>
+    </div>
+</footer>

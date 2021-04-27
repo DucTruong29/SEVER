@@ -1,0 +1,32 @@
+{
+  "name": "demo-1",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "^4.16.4",
+    "hbs": "~4.0.4",
+    "http-errors": "~1.6.3",
+    "mongoose": "^5.12.4",
+    "morgan": "~1.9.1",
+    "multer": "^1.4.2",
+    "node": "^15.14.0"
+  },
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TraiKhongYeuAi/Demo_1.git"
+  },
+  "author": "DienNguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TraiKhongYeuAi/Demo_1/issues"
+  },
+  "homepage": "https://github.com/TraiKhongYeuAi/Demo_1#readme",
+  "description": ""
+}
